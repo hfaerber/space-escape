@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nasa</title>
+  <title>Space Escape</title>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <link href="style.css" rel="stylesheet" />
 </head>
@@ -12,11 +12,7 @@
     <h1> Space Escape <span> Take a break from the noise. </span> </h1>
   </header>
   <main class="main" id='app'>
-    <section class='daily-container'>
-    <p class='blueP'>{{ date }}</p>
-    <p class='blueP'>{{ title }}</p>
-    <img class='image' :src="url"></img>
-  </section>
+    <dailyimage></dailyimage>
   </main>
   <script src="app.js"></script>
 </body>
