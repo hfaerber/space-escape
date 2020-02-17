@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nasa</title>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <link href="style.css" rel="stylesheet" />
-  </head>
-  <body class='body'>
-    <header class="header">
-      <h1> Space Escape <span> Take a break from the noise. </span> </h1>
-    </header>
-    <main class="main">
-      <p class='blueP'>This will be my vue app.</p>
-    </main>
-    <script src="app.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nasa</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body class='body'>
+  <header class="header">
+    <h1> Space Escape <span> Take a break from the noise. </span> </h1>
+  </header>
+  <main class="main" id='app'>
+    <section class='daily-container'>
+    <p class='blueP'>{{ date }}</p>
+    <p class='blueP'>{{ title }}</p>
+    <img class='image' :src="url"></img>
+  </section>
+  </main>
+  <script src="app.js"></script>
+</body>
 </html>
