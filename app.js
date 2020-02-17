@@ -1,8 +1,12 @@
 Vue.component('dailyimage', {
   props: {
-    title: {
+    test: {
       type: String,
       required: true,
+    },
+    images: {
+      type: Array,
+      required: true
     }
   },
   template: `
@@ -10,6 +14,7 @@ Vue.component('dailyimage', {
       <p class='blueP'>HELLO WORLD!</p>
       <p class='blueP'>{{ date }}</p>
       <p class='blueP'>{{ title }}</p>
+      <p class='blueP'>{{ test }}</p>
       <img class='image' :src="url"></img>
     </section>`,
   data() {
@@ -27,4 +32,40 @@ Vue.component('dailyimage', {
 
 var app = new Vue({
   el: '#app',
+  data: {
+    api: 'jq2n1ETd4APk53HUGfnypIpPwz7Q84Q6CjJAbjiT',
+    images: []
+  },
+  created () {
+    this.getDailyImages(this.api, '2020-02-01')
+      .then(data => {
+        console.log(data)
+        this.images = this.cleanData(data);
+        console.log('img', this.images)
+      })
+  },
+  methods: {
+    cleanData: (data) => {
+      return data.map(day => {
+        return {
+          date: day.date,
+          url: day.url,
+          title: day.title,
+          explanation: day.explanation,
+          copyright: day.copyright ? day.copyright : null
+        }
+      })
+    },
+    getDailyImages: async (api, date) => {
+      const url = date ?
+      `https://api.nasa.gov/planetary/apod?api_key=${api}&start_date=${date}` :
+      `https://api.nasa.gov/planetary/apod?api_key=${api}`;
+      const response = await fetch(url);
+      if(!response.ok) {
+        throw new Error('Something went wrong')
+      }
+      const imageData = await response.json();
+      return imageData
+    }
+  }
 })
