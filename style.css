@@ -1,3 +1,19 @@
 .blueP {
   color: blue;
 }
+
+
+.header {
+  /* background-color: darkgrey; */
+  color: whitesmoke;
+  /* height: 20vh; */
+  text-align: center;
+}
+
+.body {
+  background-image: url('./img/space.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
