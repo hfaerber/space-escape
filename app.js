@@ -23,7 +23,7 @@ var app = new Vue({
     error: false,
   },
   created () {
-    this.getDailyImages(this.api, '2020-02-01')
+    this.getDailyImages(this.api, this.findStartDate())
       .then(data => {
         this.images = this.cleanData(data).reverse();
       })
@@ -51,6 +51,15 @@ var app = new Vue({
       }
       const imageData = await response.json();
       return imageData
+    },
+    findStartDate: () => {
+      let today = new Date();
+      let mm = today.getMonth() + 1;
+      let yyyy = today.getFullYear();
+      if (mm < 10) {
+        mm = `0${mm}`;
+      }
+      return `${yyyy}-${mm}-01`
     }
   }
 })
