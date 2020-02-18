@@ -2,13 +2,15 @@ Vue.component('dailyimage', {
   props: ['image'],
   template: `
     <section class='daily-container'>
-      <p class='blueP'>{{ image.title }}</p>
-      <p class='blueP'>{{ image.date }}</p>
+      <header class='daily-header'>
+        <p>{{ image.title }}</p>
+        <p>{{ image.date }}</p>
+      </header>
       <img class='image' :src="image.url"></img>
     </section>`,
   data: function () {
     return {
-      image: this.image
+      dailyimage: this.image
     }
   },
 });
