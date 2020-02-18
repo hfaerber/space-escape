@@ -12,7 +12,13 @@
     <h1> Space Escape <span> Take a break from the noise. </span> </h1>
   </header>
   <main class="main" id='app'>
-    <dailyimage test="TEST PROP!" ></dailyimage>
+
+    <dailyimage
+      v-for="image in images"
+      v-bind:key="image.date"
+      v-bind:image="image"
+    ></dailyimage>
+
   </main>
   <script src="app.js"></script>
 </body>
