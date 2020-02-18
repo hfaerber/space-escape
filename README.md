@@ -2,7 +2,9 @@
 ## Mod 4 Solo Project
 [Heather Faerber](https://github.com/hfaerber)
 
-A simple Vue.js application using the Fetch API to retrieve data from Nasa's image of the day api and display all images for the current month with an option to return to the current day's image. The goal of this project was to build an application using a framework that I've never used/been taught: Vue.js.
+A simple Vue.js application using the Fetch API to retrieve data from Nasa's image of the day api and display all images for the current month with an option to return to the current day's image. The goal of this project was to build an application using a framework that I've never used/been taught: Vue.js.  
+
+[See deployed application](https://hfaerber.github.io/space-escape/)
 
 ![Screen Shot 2020-02-18 at 3 23 20 PM](https://user-images.githubusercontent.com/48163945/74783426-8e5ca200-529d-11ea-94d3-77a51b20c87d.jpg)
 
