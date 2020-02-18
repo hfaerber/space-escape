@@ -43,3 +43,23 @@
   border: 1px ridge whitesmoke;
   width: 100%;
 }
+
+#top-button {
+  display: none;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: whitesmoke;
+  color: #0a0d1a;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 1.1em;
+}
+
+#top-button:hover {
+  transform: scale(1.1);
+}
