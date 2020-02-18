@@ -20,16 +20,14 @@ var app = new Vue({
   data: {
     api: 'jq2n1ETd4APk53HUGfnypIpPwz7Q84Q6CjJAbjiT',
     images: [],
-    title: 'TEST TITLE FROM APP VUE',
-    date: 'TEST DATE PLEASE'
+    error: false,
   },
   created () {
     this.getDailyImages(this.api, '2020-02-01')
       .then(data => {
-        // console.log(data)
         this.images = this.cleanData(data).reverse();
-        // console.log('img', this.images)
       })
+      .catch(err => this.error = true)
   },
   methods: {
     cleanData: (data) => {
@@ -57,8 +55,8 @@ var app = new Vue({
   }
 })
 
+// Code to control display/functionaity of 'BackToToday' button
 topbutton = document.getElementById("top-button");
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
