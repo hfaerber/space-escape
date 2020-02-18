@@ -12,7 +12,8 @@
     <h1> Space Escape</h1> <h2 class='italic'>Take a break from the noise.</h2>
   </header>
   <main class="main" id='app'>
-
+    <h3 class='error-message' v-if="error">
+      Uh-oh. The data seems to be lost in space.</h3>
     <dailyimage
       v-for="image in images"
       v-bind:key="image.date"
