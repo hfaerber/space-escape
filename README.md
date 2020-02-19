@@ -18,6 +18,6 @@ Following the recommendation of the Vue documentation, I opted for this very sim
 
 This proved to be difficult as the majority of the documentation online applied to Vue CLI set up.  
 
-When it came time to build a test suite, I realized that this simple approach would not allow for testing easily.  With the learning goals in mind, I've begun the process of migrating this simple application to [this Vue CLI repo](https://github.com/hfaerber) and refactoring it to more appropriately use Vue components.  
+When it came time to build a test suite, I realized that this simple approach would not allow for testing easily.  With the learning goals in mind, I've begun the process of migrating this simple application to [this Vue CLI repo](https://github.com/hfaerber/vue-cli-space-escape) and refactoring it to more appropriately use Vue components.  
 
 Overall, Being able to navigate a foreign framework using only the documentation found online was challenging and exciting.  From initial set up, to overall architecture, to syntax...this project allowed for growth and learning through each of its challenges.
